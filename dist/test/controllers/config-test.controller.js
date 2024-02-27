@@ -23,6 +23,9 @@ let ConfigTestController = class ConfigTestController {
     create(createConfigTestDto) {
         return this.ConfigTestService.create(createConfigTestDto);
     }
+    socket(message) {
+        return this.ConfigTestService.socket(message);
+    }
     findAll() {
         return this.ConfigTestService.findAll();
     }
@@ -41,6 +44,13 @@ __decorate([
     __metadata("design:paramtypes", [create_config_test_dto_1.CreateConfigTestDto]),
     __metadata("design:returntype", void 0)
 ], ConfigTestController.prototype, "create", null);
+__decorate([
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], ConfigTestController.prototype, "socket", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),

@@ -12,6 +12,7 @@ const config_test_service_1 = require("./services/config-test.service");
 const config_test_controller_1 = require("./controllers/config-test.controller");
 const repository_test_module_1 = require("../repository/repository-test.module");
 const axios_1 = require("@nestjs/axios");
+const websocket_module_1 = require("./websocket/websocket.module");
 let ConfigTestModule = class ConfigTestModule {
 };
 exports.ConfigTestModule = ConfigTestModule;
@@ -19,7 +20,7 @@ exports.ConfigTestModule = ConfigTestModule = __decorate([
     (0, common_1.Module)({
         controllers: [config_test_controller_1.ConfigTestController],
         providers: [config_test_service_1.ConfigTestService],
-        imports: [repository_test_module_1.RepositoryTestModule, axios_1.HttpModule],
+        imports: [repository_test_module_1.RepositoryTestModule, axios_1.HttpModule, websocket_module_1.EventsModule],
     })
 ], ConfigTestModule);
 //# sourceMappingURL=config-test.module.js.map
